@@ -1,0 +1,13 @@
+node_modules
+dist
+.tempmediaStorage
+systeme_export
+*.png
+*.webp
+*.py
+*.mjs
+.next
+out
+.DS_Store
+.env
+.vercel

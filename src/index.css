@@ -1,0 +1,110 @@
+:root {
+  --color-primary: #4A3728;
+  /* Dark Wood */
+  --color-secondary: #F9F7F2;
+  /* Ivory */
+  --color-accent: #2D4636;
+  /* Deep Green */
+  --color-gold: #C5A059;
+  /* Modern Gold */
+  --color-text-dark: #2A2118;
+  --color-text-light: #F9F7F2;
+  --font-heading: 'Cormorant Garamond', 'Noto Serif JP', serif;
+  --font-body: 'Montserrat', sans-serif;
+  --section-padding: 120px 24px;
+  --ease: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Grain Effect */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://grainy-gradients.vercel.app/noise.svg");
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-secondary);
+  color: var(--color-text-dark);
+  line-height: 1.7;
+  font-size: 1.125rem;
+  /* 18px */
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+button,
+.cta-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Base Layout */
+#root {
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Premium Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+/* Glassmorphism for specific elements */
+.glass {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
