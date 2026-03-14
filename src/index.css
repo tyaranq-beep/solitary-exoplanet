@@ -38,10 +38,10 @@ body::before {
 body {
   font-family: var(--font-body);
   background-color: var(--color-secondary);
-  color: var(--color-text-dark);
-  line-height: 1.7;
-  font-size: 1.125rem;
-  /* 18px */
+  color: #1A1512;
+  /* Darker for better contrast */
+  line-height: 1.85;
+  font-size: 1.25rem;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -107,4 +107,26 @@ img {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 1.125rem;
+    /* 18px */
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  .container {
+    padding: 0 15px;
+    /* Minimum 15px edge margin */
+  }
+
+  h1 {
+    font-size: 2.2rem !important;
+  }
+
+  h2 {
+    font-size: 1.8rem !important;
+  }
 }
